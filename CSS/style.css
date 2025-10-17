@@ -17,8 +17,8 @@ nav {
     padding: 1rem 5%;
     width: 100%;
     background-color: #007bff;
-    position:fixed;
-    z-index: 1000;
+    /* position:fixed;
+    z-index: 1000; */
 }
 .logo {
     font-size: 1.5rem;
@@ -105,9 +105,12 @@ nav {
     max-width: 80%;
     height: auto;
 }
-
+ /* Achivements */
  .achivements {
-    background-color: #007bff;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+              url("../assets/laundry-bg.jpg");
+  background-size: cover;
+  background-position: top;
     padding: 20px 100px;
     display: flex;
     justify-content: space-between; 
@@ -378,7 +381,11 @@ nav {
 
 /* ================== NEWSLETTER SECTION ================== */
 .newsletter {
-  background: linear-gradient(135deg, #007bff, #0056b3);
+   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+              url("../assets/laundry-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
   color: #fff;
   padding: 80px 100px;
   font-family: 'Poppins', sans-serif;
@@ -474,10 +481,12 @@ nav {
 }
 /* ================== FOOTER SECTION ================== */
 .footer {
-  background-color: #007bff;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+              url("../assets/laundry-bg.jpg");
+  background-size: cover;
+  background-position: bottom;
   color: #fff;
   padding: 60px 100px 20px;
-  font-family: 'Poppins', sans-serif;
 }
 
 .footer-container {
