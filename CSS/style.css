@@ -146,7 +146,17 @@ nav {
     color: #fff;
 }
 
-
+/* ---------------- SERVICES SECTION ---------------- */
+.services-section{
+  padding: 20px 50px;
+  background-color: #f4f6fb;
+  text-align: center;
+}
+.services-section h1 {
+  font-size: 60px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
 .services {
   display: flex;
   justify-content: space-between;
@@ -187,8 +197,9 @@ nav {
 
 /* Left Div Content */
 .left-div h3 {
-  font-size: 22px;
-  margin-bottom: 8px;
+  font-size: 18px;
+  margin-bottom: 5px;
+  font-weight: lighter;
 }
 
 .left-div p {
@@ -306,4 +317,240 @@ nav {
     font-size: 50px;
     vertical-align: middle;
     margin-right: 6px;
+}
+
+/* ---------------- QUALITY DESCRIPTION ---------------- */
+.quality-description {
+  background-color: #f9fbff;
+  padding: 70px 100px;
+  text-align: center;
+}
+
+.quality-description h2 {
+  font-size: 60px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.quality-description p {
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.quality-points {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.point {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.point:hover {
+  transform: translateY(-10px);
+}
+
+.point ion-icon {
+  font-size: 50px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.point h4 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.point p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* ================== NEWSLETTER SECTION ================== */
+.newsletter {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  padding: 80px 100px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.newsletter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.newsletter-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.newsletter-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.newsletter-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #eaf6ff;
+  max-width: 500px;
+}
+
+.newsletter-form {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.newsletter-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.newsletter-form button:hover {
+  background: #0056b3;
+}
+
+
+/* ---------------- EMAIL CONFIRMATION PLACEHOLDER ---------------- */
+.confirmation-placeholder {
+  background: #f1f7ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.confirmation-placeholder h2 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.confirmation-placeholder p {
+  color: #555;
+  font-size: 1.1rem;
+}
+/* ================== FOOTER SECTION ================== */
+.footer {
+  background-color: #007bff;
+  color: #fff;
+  padding: 60px 100px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 30px;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #eaf6ff;
+}
+
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #eaf6ff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #eaf6ff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #eaf6ff;
 }
