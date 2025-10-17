@@ -22,7 +22,7 @@
         </nav>
     
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero-section">
             <div class="hero-text">
                 <h1>Revitalize Your Clothes with Expert <span>Laundry Services!</span></h1>
                 <p>
@@ -36,7 +36,107 @@
                 <img src="assets/WashingMachine.png" alt="Laundry Service">
             </div>
         </section>
+
+        <!-- Achievements -->
+        <section class="Our_Achivements">
+        <div class="achivements">
+            <h2>Our Achievements</h2>
+            <div class="stats">
+                <div class="stat">
+                    <h4>15+</h4>
+                    <p>Laundry Services</p>
+                </div>
+                <div class="stat">
+                    <h4>240+</h4>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat">
+                    <h4>2+</h4>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Services -->
+        <section class="services">
+            <!-- Left Div -->
+            <div class="left-div">
+                <h3>Our Services</h3>
+                <p class="bottom-line">Click On The Add To Cart Button To Add The Services To Your Cart</p>
+        
+                <div class="service-item">
+                    <p><ion-icon name="shirt-outline" class="icon-small"></ion-icon> Dry Cleaning - <span>₹200.00</span></p>
+                    <button>Add Item</button>
+                </div>
+        
+                <div class="service-item">
+                    <p><ion-icon name="water-outline" class="icon-small"></ion-icon> Wash & Fold - <span>₹100.00</span></p>
+                    <button>Add Item</button>
+                </div>
+        
+                <div class="service-item">
+                    <p><ion-icon name="sunny-outline" class="icon-small"></ion-icon> Ironing - <span>₹30.00</span></p>
+                    <button>Add Item</button>
+                </div>
+        
+                <div class="service-item">
+                    <p><ion-icon name="color-wand-outline" class="icon-small"></ion-icon> Stain Removal - <span>₹500.00</span></p>
+                    <button>Add Item</button>
+                </div>
+        
+                <div class="service-item">
+                    <p><ion-icon name="leaf-outline" class="icon-small"></ion-icon> Leather & Suede Cleaning - <span>₹999.00</span></p>
+                    <button>Remove Item</button>
+                </div>
+        
+                <div class="service-item">
+                    <p><ion-icon name="ribbon-outline" class="icon-small"></ion-icon> Wedding Dress Cleaning - <span>₹2800.00</span></p>
+                    <button>Add Item</button>
+                </div>
+        
+                <p class="top-line"><ion-icon name="information-circle-outline" class="icon-small"></ion-icon> Add the items to the cart and book now</p>
+            </div>
+        
+            <!-- Right Div -->
+            <div class="right-div">
+                <h3>Added Items</h3>
+        
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Service Name</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-body">
+                        <tr>
+                            <td colspan="3" style="text-align:center; color:#888;">No items added yet</td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+                <div class="total">
+                    <p>Total Amount: <span>₹0.00</span></p>
+                </div>
+        
+                <div class="booking-form">
+                    <h4>Book Now</h4>
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email ID">
+                    <input type="tel" placeholder="Phone Number">
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+        </section>
+
+
+
+
     
     <script src="JS/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

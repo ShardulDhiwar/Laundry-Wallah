@@ -1,133 +1,309 @@
- * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: cursive, sans-serif;
-        }
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive, sans-serif;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    width: 100%;
+    background-color: #007bff;
+    position:fixed;
+    z-index: 1000;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #fff;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #eee;
+    font-weight: 500;
+}
+.nav-links a:hover {
+    color: #333;
+}
+.username {
+    background: #eaf6ff;
+    padding: 6px 14px;
+    border-radius: 15px;
+    color: #007bff;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.username:hover {
+    background: #007bff;
+    color: #eaf6ff;
+}
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 0 5%;
+    background: linear-gradient(to right, #ffffff, #f0f9ff);
+}
+.hero-text {
+    flex: 1;
+}
+.hero-text h1 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+.hero-text h1 span {
+    color: #007bff;
+}
+.hero-text p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 450px;
+}
+.hero-text button {
+    padding: 12px 24px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.hero-text button:hover {
+    background: #0056b3;
+    transform: scale(1.5) translate(30px);
+    transition: transform 0.3s ease;
+}
+.hero-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.hero-img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+.hero-img img {
+    max-width: 80%;
+    height: auto;
+}
 
-        body {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+ .achivements {
+    background-color: #007bff;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+}
 
-        /* Navbar */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            background-color: #007bff;
-        }
+.achivements h2 {
+    color: #fff;
+    font-size: 40px;
+    margin: 0;
+    flex: 1; 
+}
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            cursor: pointer;
-            color: #fff;
-        }
+.achivements .stats {
+    display: flex;
+    gap: 30px; 
+    flex: 2;
+    justify-content:space-around; 
+    flex-wrap: wrap;
+}
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 2rem;
-        }
+.stat {
+    text-align: center;
+}
 
-        .nav-links a {
-            text-decoration: none;
-            color: #eee;
-            font-weight: 500;
-        }
+.stat h4 {
+    font-size: 32px;
+    color: #fff;
+    margin: 0;
+}
 
-        .nav-links a:hover {
-            color: #333;
-        }
+.stat p {
+    
+    font-weight: 500;
+    color: #fff;
+}
 
-        .username {
-            background: #eaf6ff;
-            padding: 6px 14px;
-            border-radius: 15px;
-            color: #007bff;
-            font-size: 0.9rem;
-            cursor: pointer;
-        }
 
-        .username:hover {
-            background: #007bff;
-            color: #eaf6ff;
-        }
+.services {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 80px;
+  background-color: #f4f6fb;
+  gap: 30px;
+  font-family: 'Poppins', sans-serif;
+}
 
-        /* Hero Section */
-        .hero {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex: 1;
-            padding: 0 5%;
-            background: linear-gradient(to right, #ffffff, #f0f9ff);
-        }
+.bottom-line {
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #333;
+}
+.top-line{
+  font-size: 16px;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #333;
+}
+/* Left & Right Divs */
+.left-div, .right-div {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
-        .hero-text {
-            flex: 1;
-        }
+.left-div {
+  flex: 1;
+}
 
-        .hero-text h1 {
-            font-size: 2.8rem;
-            color: #333;
-            margin-bottom: 1rem;
-        }
+.right-div {
+  width: 380px;
+}
 
-        .hero-text h1 span {
-            color: #007bff;
-        }
+/* Left Div Content */
+.left-div h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
 
-        .hero-text p {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            max-width: 450px;
-        }
+.left-div p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
 
-        .hero-text button {
-            padding: 12px 24px;
-            background: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
 
-        .hero-text button:hover {
-            background: #0056b3;
-            transform: scale(1.5) translate(30px);
-            transition: transform 0.3s ease;
-        }
+.service-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
 
-        .hero-img {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            cursor: pointer;
-        }
+.service-item button {
+  border: 1px solid #0040ff;
+  background-color: #007bff;
+  width: 200px;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+}
 
-        .hero-img:hover {
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
-        }
+.info {
+  margin-top: 15px;
+  color: #007bff;
+  font-weight: 500;
+  font-size: 14px;
+}
 
-        .hero-img img {
-            max-width: 80%;
-            height: auto;
-        }
+/* Right Div */
+.right-div h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
 
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
+/* Cart Table */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
 
-            .hero-img {
-                margin-top: 2rem;
-            }
-        }
+.cart-table th, .cart-table td {
+  text-align: left;
+  padding: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.cart-table th {
+  background-color: #f8f8f8;
+  border-bottom: 2px solid #ddd;
+}
+
+.cart-table td {
+  border-bottom: 1px solid #eee;
+}
+
+/* Total */
+.total {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0 20px;
+}
+
+.total span {
+  color: #e63946;
+}
+
+/* Booking Form */
+.booking-form h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.book-btn {
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.book-btn:hover {
+  background-color: #0069d9;
+}
+
+.icon-small {
+    font-size: 50px;
+    vertical-align: middle;
+    margin-right: 6px;
+}

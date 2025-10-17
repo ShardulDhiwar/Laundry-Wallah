@@ -1,0 +1,10 @@
+ @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-img {
+                margin-top: 2rem;
+            }
+        }
