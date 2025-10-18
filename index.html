@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/mediaQueries.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Laundry Wallah</title>
 </head>
 <body>
@@ -15,10 +15,10 @@
             <div class="logo">Laundry Wallah</div>
         
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         
             <div class="username">Shardul</div>
@@ -33,14 +33,14 @@
 
     
         <!-- Hero Section -->
-        <section class="hero-section">
+        <section class="hero-section" id="home" data-aos="fade-up" data-aos-duration="2000">
             <div class="hero-text">
                 <h1>Revitalize Your Clothes with Expert <span>Laundry Services!</span></h1>
                 <p>
                     From premium dry cleaning to swift wash and fold, we deliver care and convenience.
                     Schedule a pickup and rediscover the freshness of your clothes today!
                 </p>
-                <button>Book a service today!</button>
+                <a href="#services"><button>Book a service today!</button></a>
             </div>
     
             <div class="hero-img">
@@ -49,7 +49,7 @@
         </section>
 
         <!-- Achievements -->
-        <section class="Our_Achivements">
+        <section class="Our_Achivements" data-aos="fade-up" data-aos-duration="2000">
         <div class="achivements">
             <h2>Our Achievements</h2>
             <div class="stats">
@@ -70,49 +70,49 @@
         </section>
 
         <!-- Services -->
-        <section class="services-section">
+        <section class="services-section" id="services" data-aos="fade-up" data-aos-duration="2000">
             <h1>Our Services</h1>
             <div class="services">
             <!-- Left Div -->
-            <div class="left-div">
+            <div class="left-div" data-aos="slide-right" data-aos-duration="2000">
                 <h3 class="bottom-line">Click On The Add To Cart Button To Add The Services To Your Cart</h3>
         
                 <div class="service-item">
                     <p><ion-icon name="shirt-outline" class="icon-small"></ion-icon> Dry Cleaning - <span>₹200.00</span></p>
-                    <button>Add Item</button>
+                    <button>Add Service</button>
                 </div>
         
                 <div class="service-item">
                     <p><ion-icon name="water-outline" class="icon-small"></ion-icon> Wash & Fold - <span>₹100.00</span></p>
-                    <button>Add Item</button>
+                    <button>Add Service</button>
                 </div>
         
                 <div class="service-item">
                     <p><ion-icon name="sunny-outline" class="icon-small"></ion-icon> Ironing - <span>₹30.00</span></p>
-                    <button>Add Item</button>
+                    <button>Add Service</button>
                 </div>
         
                 <div class="service-item">
                     <p><ion-icon name="color-wand-outline" class="icon-small"></ion-icon> Stain Removal - <span>₹500.00</span></p>
-                    <button>Add Item</button>
+                    <button>Add Service</button>
                 </div>
         
                 <div class="service-item">
                     <p><ion-icon name="leaf-outline" class="icon-small"></ion-icon> Leather & Suede Cleaning - <span>₹999.00</span></p>
-                    <button>Add Item</button>
+                    <button>Add Service</button>
                 </div>
         
                 <div class="service-item">
                     <p><ion-icon name="ribbon-outline" class="icon-small"></ion-icon> Wedding Dress Cleaning - <span>₹2800.00</span></p>
-                    <button>Add Item</button>
+                    <button>Add Service</button>
                 </div>
         
                 <p class="top-line"><ion-icon name="information-circle-outline" class="icon-small"></ion-icon> Add the items to the cart and book now</p>
             </div>
         
             <!-- Right Div -->
-            <div class="right-div">
-                <h3>Added Items</h3>
+            <div class="right-div" data-aos="slide-left" data-aos-duration="2000">
+                <h3>Added Service</h3>
         
                 <table class="cart-table">
                     <thead>
@@ -144,28 +144,28 @@
         </div>
         </section>
         <!-- Quality Description Section -->
-        <section class="quality-description">
+        <section class="quality-description" id="about" data-aos="fade-up" data-aos-duration="2000">
             <h2>Why Choose Our Laundry Service?</h2>
             <p>
                 Discover what makes <strong>Laundry Wallah</strong> the most trusted laundry partner:
             </p>
             <div class="quality-points">
-                <div class="point">
+                <div class="point" data-aos="slide-right" data-aos-duration="2000">
                     <ion-icon name="leaf-outline"></ion-icon>
                     <h4>Eco-Friendly Cleaning</h4>
                     <p>We use biodegradable detergents that protect your clothes and the planet.</p>
                 </div>
-                <div class="point">
+                <div class="point" data-aos="slide-down" data-aos-duration="2000">
                     <ion-icon name="flash-outline"></ion-icon>
                     <h4>Quick Turnaround</h4>
                     <p>Fast and efficient service with guaranteed on-time delivery.</p>
                 </div>
-                <div class="point">
+                <div class="point" data-aos="slide-up" data-aos-duration="2000">
                     <ion-icon name="shirt-outline"></ion-icon>
                     <h4>Professional Care</h4>
                     <p>Our experts treat every fabric type with precise care and attention.</p>
                 </div>
-                <div class="point">
+                <div class="point" data-aos="slide-left" data-aos-duration="2000">
                     <ion-icon name="wallet-outline"></ion-icon>
                     <h4>Affordable Pricing</h4>
                     <p>Premium laundry services at prices that fit every pocket.</p>
@@ -174,10 +174,10 @@
         </section>
         
         <!-- Newsletter Section -->
-    <section class="newsletter">
+    <section class="newsletter" id="contact" data-aos="fade-up" data-aos-duration="2000">
         <div class="newsletter-container">
             <!-- Left Side: Text -->
-            <div class="newsletter-text">
+            <div class="newsletter-text" data-aos="flip-right" data-aos-duration="2000">
                 <h2>Stay Updated!</h2>
                 <p>
                     Subscribe to our newsletter and be the first to know about new offers,
@@ -186,7 +186,7 @@
             </div>
     
             <!-- Right Side: Form -->
-            <div class="newsletter-form">
+            <div class="newsletter-form" data-aos="flip-left" data-aos-duration="2000">
                 <form id="newsletter-form">
                     <input type="text" placeholder="Full Name" required>
                     <input type="email" placeholder="Email Address" required>
@@ -198,13 +198,16 @@
 
         
         <!-- Email Confirmation Placeholder -->
-        <section class="confirmation-placeholder">
+        <section class="confirmation-placeholder" >
+            <div class="confirmation-placeholder-div" data-aos="zoom-in" data-aos-duration="2000">
             <h2>Booking Confirmation</h2>
             <p>
                 After booking, a confirmation message or email will appear here.
             </p>
+            <a href="#services"><button>Book Now!</button></a>
+            </div>
         </section>
-        <!-- ================== FOOTER SECTION ================== -->
+        <!-- FOOTER SECTION  -->
         <footer class="footer">
             <div class="footer-container">
                 <!-- Logo and About -->
@@ -229,8 +232,8 @@
                 <div class="footer-col">
                     <h4>Quick Access</h4>
                     <ul>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
         
@@ -241,7 +244,6 @@
                         <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
                         <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
                         <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
                     </div>
                 </div>
             </div>
@@ -253,7 +255,13 @@
 
     
     <script src="JS/script.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="JS/scroll.js"></script>
 </body>
 </html>
