@@ -9,15 +9,14 @@
     padding: 1rem 5%;
     width: 100%;
     background-color: #007bff;
-    /* position:fixed;
-    z-index: 1000; */
-}
-.logo {
+  }
+
+  .logo {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
     color: #fff;
-}
+  }
 
   .hero-section {
     flex-direction: column;
@@ -86,13 +85,13 @@
     flex-direction: row;
     gap: 20px;
   }
-  .footer-col{
+
+  .footer-col {
     padding-bottom: 0;
   }
 }
 
 /* 480px and below */
-
 .hamburger {
   display: none;
   flex-direction: column;
@@ -109,7 +108,6 @@
   transition: all 0.3s ease;
 }
 
-
 @media (max-width: 480px) {
   .hamburger {
     display: flex;
@@ -117,7 +115,7 @@
 
   .nav-links {
     position: absolute;
-    top: 70px; 
+    top: 70px;
     left: 0;
     right: 0;
     background-color: #007bff;
@@ -138,11 +136,14 @@
   }
 
   .nav-links.active {
-    max-height: 500px; 
+    max-height: 500px;
+  }
+
+  .services-section .right-div{
+    margin-left: 21px;
   }
 }
 
-/* Hamburger animation to X */
 .hamburger.toggle span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -155,3 +156,108 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
+
+/* 375px and below */
+@media (max-width: 375px) {
+
+  nav {
+    padding: 0.8rem 4%;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .hero-text button {
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+
+  .achivements h2,
+  .services-section h1,
+  .quality-description h2 {
+    font-size: 1.6rem;
+  }
+
+  .newsletter-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer {
+    padding: 30px 10px 15px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .services-section .left-div{
+    padding-right: 50px;
+  }
+}
+
+/* 320px and below */
+@media (max-width: 320px) {
+
+  nav {
+    padding: 0.7rem 3%;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-text button {
+    padding: 7px 12px;
+    font-size: 0.8rem;
+  }
+
+  .achivements h2 {
+    font-size: 1.4rem;
+  }
+
+  .services {
+    padding: 15px 8px;
+  }
+
+  .newsletter {
+    padding: 40px 15px;
+  }
+
+  .newsletter-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .confirmation-placeholder {
+    padding: 30px 10px;
+  }
+
+  .confirmation-placeholder h2 {
+    font-size: 1.4rem;
+  }
+
+  .confirmation-placeholder p {
+    font-size: 0.9rem;
+  }
+}
