@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: cursive, sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
     height: 100vh;
     display: flex;
@@ -149,7 +152,7 @@ nav {
     color: #fff;
 }
 
-/* ---------------- SERVICES SECTION ---------------- */
+/* SERVICES SECTION  */
 .services-section{
   padding: 20px 50px;
   background-color: #f4f6fb;
@@ -322,7 +325,7 @@ nav {
     margin-right: 6px;
 }
 
-/* ---------------- QUALITY DESCRIPTION ---------------- */
+/* QUALITY DESCRIPTION  */
 .quality-description {
   background-color: #f9fbff;
   padding: 70px 100px;
@@ -379,7 +382,7 @@ nav {
 }
 
 
-/* ================== NEWSLETTER SECTION ================== */
+ /* NEWSLETTER SECTION  */
 .newsletter {
    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
               url("../assets/laundry-bg.jpg");
@@ -462,7 +465,7 @@ nav {
 }
 
 
-/* ---------------- EMAIL CONFIRMATION PLACEHOLDER ---------------- */
+ /* EMAIL CONFIRMATION PLACEHOLDER  */
 .confirmation-placeholder {
   background: #f1f7ff;
   padding: 60px 20px;
@@ -479,7 +482,28 @@ nav {
   color: #555;
   font-size: 1.1rem;
 }
-/* ================== FOOTER SECTION ================== */
+
+.confirmation-placeholder button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  margin-top: 16px ;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  
+}
+
+.confirmation-placeholder button:hover {
+  background: #0056b3;
+  font-size: 2rem;
+  width: auto;
+}
+
+/* FOOTER SECTION  */
 .footer {
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
               url("../assets/laundry-bg.jpg");
@@ -551,7 +575,7 @@ nav {
 
 .social-icons a:hover {
   transform: scale(1.2);
-  color: #eaf6ff;
+  color: #007bff;
 }
 
 .footer-bottom {
