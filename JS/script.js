@@ -1,9 +1,10 @@
+
 var cartBody = document.getElementById("cart-body");
 var totalAmount = document.getElementsByClassName("total")[0].getElementsByTagName("span")[0];
 var addButtons = document.getElementsByClassName("service-item");
 var bookBtn = document.getElementsByClassName("book-btn")[0];
 var newsletterForm = document.getElementById("newsletter-form");
-var confirmationPlaceholder = document.getElementsByClassName("confirmation-placeholder-div")[0];
+var emailMessage = document.getElementsByClassName("emailMessage")[0];
 
 var cart = [];
 var total = 0;
@@ -15,7 +16,7 @@ for (var i = 0; i < addButtons.length; i++) {
         btn.addEventListener("click", function () {
             var serviceText = addButtons[i].getElementsByTagName("p")[0].innerText;
             var parts = serviceText.split(" - ");
-            var name = parts[0];
+            var name = parts[0].trim();
             var price = parseFloat(parts[1].replace("₹", ""));
 
             if (btn.innerText.indexOf("Add") !== -1) {
@@ -31,7 +32,7 @@ for (var i = 0; i < addButtons.length; i++) {
                         break;
                     }
                 }
-                btn.innerText = "Add Item";
+                btn.innerText = "Add Service";
                 btn.style.backgroundColor = "#007bff";
             }
 
@@ -55,15 +56,96 @@ function updateCart() {
     totalAmount.innerText = "₹" + total.toFixed(2);
 }
 
+// ============ SEND EMAIL FUNCTION ============
+function sendBookingEmail(name, email, phone, services, totalAmount) {
+    // Create service list for email
+    var serviceList = services.map(function (s, i) {
+        return (i + 1) + ". " + s.name + " - ₹" + s.price.toFixed(2);
+    }).join("\n");
+
+    // Email template parameters
+    var templateParams = {
+        to_name: name,
+        to_email: email,
+        customer_name: name,
+        customer_email: email,
+        customer_phone: phone,
+        services: serviceList,
+        total_amount: "₹" + totalAmount.toFixed(2),
+        service_count: services.length
+    };
+
+    // Show loading state
+    bookBtn.disabled = true;
+    bookBtn.innerText = "Sending...";
+
+    // Send email using EmailJS
+    emailjs.send('service_31qoh5f', 'template_x2g5q2e', templateParams)
+        .then(function (response) {
+            console.log('Email sent successfully!', response.status, response.text);
+
+            // Show confirmation message
+            emailMessage.innerHTML =
+                "<ion-icon name=\"information-circle-outline\" class=\"icon-small\"></ion-icon>" +
+                "<p>Booking Confirmed, Email has been sent</p>";
+
+            emailMessage.classList.add('show');
+            alert("Thank you " + name + "! Your booking is confirmed. A confirmation email has been sent to " + email + ".");
+            
+
+            // Reset form and cart
+            resetBookingForm();
+        }, function (error) {
+            console.log('Failed to send email:', error);
+            alert("Booking saved! However, we couldn't send the confirmation email. We'll contact you at " + phone + " soon.");
+            // Still show confirmation
+            emailMessage.innerHTML =
+                "<h2>Unable to sent Email</h2>";
+            emailMessage.classList.add('show');
+            resetBookingForm();
+        });
+}
+
+// ============ RESET BOOKING FORM ============
+function resetBookingForm() {
+    var inputs = document.getElementsByClassName("booking-form")[0].getElementsByTagName("input");
+
+    cart = [];
+    total = 0;
+
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].value = "";
+    }
+
+    for (var i = 0; i < addButtons.length; i++) {
+        var btn = addButtons[i].getElementsByTagName("button")[0];
+        btn.innerText = "Add Service";
+        btn.style.backgroundColor = "#007bff";
+    }
+
+    updateCart();
+
+    // Re-enable button
+    bookBtn.disabled = false;
+    bookBtn.innerText = "Book Now";
+}
+
 // ============ BOOKING FORM ============
 bookBtn.addEventListener("click", function () {
     var inputs = document.getElementsByClassName("booking-form")[0].getElementsByTagName("input");
-    var name = inputs[0].value;
-    var email = inputs[1].value;
-    var phone = inputs[2].value;
+    var name = inputs[0].value.trim();
+    var email = inputs[1].value.trim();
+    var phone = inputs[2].value.trim();
 
     if (!name || !email || !phone) {
         alert("Please fill all booking details!");
+        return;
+    }
+
+    // Email validation
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address!");
         return;
     }
 
@@ -72,30 +154,8 @@ bookBtn.addEventListener("click", function () {
         return;
     }
 
-    // Show confirmation message
-    confirmationPlaceholder.innerHTML =
-        "<h2>Booking Confirmed 🎉</h2>" +
-        "<p>Thank you, <strong>" + name + "</strong>! We’ve received your booking of <strong>" +
-        cart.length + "</strong> service(s).</p>" +
-        "<p>Total Amount: <strong>₹" + total.toFixed(2) + "</strong></p>" +
-        "<p>We’ll contact you shortly at <strong>" + email + "</strong>.</p>";
-
-    // Scroll to confirmation section
-    confirmationPlaceholder.scrollIntoView({ behavior: "smooth" });
-
-    // Reset
-    cart = [];
-    total = 0;
-    for (var i = 0; i < inputs.length; i++) {
-        inputs[i].value = "";
-    }
-    for (var i = 0; i < addButtons.length; i++) {
-        var btn = addButtons[i].getElementsByTagName("button")[0];
-        btn.innerText = "Add Item";
-        btn.style.backgroundColor = "#007bff";
-    }
-
-    updateCart();
+    // Send email
+    sendBookingEmail(name, email, phone, cart, total);
 });
 
 // ============ NEWSLETTER FORM ============
@@ -125,4 +185,13 @@ var navLinks = document.getElementsByClassName("nav-links")[0];
 hamburger.addEventListener("click", function () {
     navLinks.classList.toggle("active");
     hamburger.classList.toggle("toggle");
+});
+
+// Close menu when clicking a link
+var navLinksItems = document.querySelectorAll(".nav-links a");
+navLinksItems.forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        hamburger.classList.remove("toggle");
+    });
 });
