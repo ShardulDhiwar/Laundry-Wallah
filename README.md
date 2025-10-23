@@ -29,7 +29,7 @@ Users can easily add or remove services, view total cost dynamically, and confir
 ---
 
 ## 💻 Project Structure
-
+```
 Laundry-Wallah/
 │
 ├── index.html
@@ -40,7 +40,7 @@ Laundry-Wallah/
 │ └── icons/
 └── README.md
 
-
+```
 ---
 
 ## ⚙️ How to Run Locally
@@ -54,6 +54,7 @@ Laundry-Wallah/
 3. **Open index.html in your browser and explore the app.
 
 That’s it! 🎉**
+
 
 
 
